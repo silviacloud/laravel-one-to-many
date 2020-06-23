@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:#4b3b42;
+}
+
+header,
+footer{
+  height: 80px;
+  width: 100%;
+  background-color: #98aeb6;
+  padding:2% 10%;
+}
+
+main{
+  height:calc(100% - 80px);
+  width: 100%;
+  background-color: #e2cbb0;
+  padding-bottom: 2%;
+  h1{
+    padding: 2% 10%;
+  }
+  h3{
+    margin: 2% 0 1% 10%;
+  }
+  p{
+    margin: 1% 12%;
+  }
+  a{
+    padding: 2% 10%;
+  }
+  form{
+    padding:4%;
+    text-align: center;
+    label,
+    input{
+      margin: 0.5%;
+    }
+
+  }
+}

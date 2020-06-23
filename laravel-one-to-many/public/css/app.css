@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #4b3b42;
+}
+
+header,
+footer {
+  height: 80px;
+  width: 100%;
+  background-color: #98aeb6;
+  padding: 2% 10%;
+}
+
+main {
+  height: calc(100% - 80px);
+  width: 100%;
+  background-color: #e2cbb0;
+  padding-bottom: 2%;
+}
+
+main h1 {
+  padding: 2% 10%;
+}
+
+main h3 {
+  margin: 2% 0 1% 10%;
+}
+
+main p {
+  margin: 1% 12%;
+}
+
+main a {
+  padding: 2% 10%;
+}
+
+main form {
+  padding: 4%;
+  text-align: center;
+}
+
+main form label,
+main form input {
+  margin: 0.5%;
+}
+

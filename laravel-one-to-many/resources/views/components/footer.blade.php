@@ -1,0 +1,5 @@
+<footer>
+
+  SHARED FOOTER
+
+</footer>
