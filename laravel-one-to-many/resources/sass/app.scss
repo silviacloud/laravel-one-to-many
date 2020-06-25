@@ -1,42 +1,40 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color:#4b3b42;
 }
 
 header,
 footer{
-  height: 80px;
+  height: 70px;
   width: 100%;
-  background-color: #98aeb6;
-  padding:2% 10%;
+  background-color: #ccc4c1;
+  padding: 1.5% 10%;
+}
+
+header{
+  border-bottom: #3e3e3c;
 }
 
 main{
-  height:calc(100% - 80px);
-  width: 100%;
-  background-color: #e2cbb0;
-  padding-bottom: 2%;
-  h1{
-    padding: 2% 10%;
-  }
+  min-height: calc(100vh - 70px - 70px);
+  background-color: #e9eaec;
+  padding: 4% 10%;
   h3{
-    margin: 2% 0 1% 10%;
+    margin:1.5% 0; 
   }
-  p{
-    margin: 1% 12%;
-  }
-  a{
-    padding: 2% 10%;
-  }
-  form{
-    padding:4%;
-    text-align: center;
-    label,
-    input{
-      margin: 0.5%;
-    }
+}
 
-  }
+footer{
+  border-top: #3e3e3c;
 }

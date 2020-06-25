@@ -1,30 +1,23 @@
-@extends('layouts.layout')
-
+@extends('layouts.app')
 
 @section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
 
-  <main>
-    <h1>Employees</h1>
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
 
-
-
-      @foreach ($tasks as $task)
-
-
-          <h3>TASK: {{$task -> name}}</h3>
-          <p>Description: {{$task -> description}}</p>
-          <p>Deadline: {{$task -> deadline}}</p>
-
-          <p>Employee: {{$task -> employee -> firstname}} {{$task -> employee -> lastname}}</p>
-
-          <a href="{{route('edit', $task['id'])}}">EDIT</a>
-      @endforeach
-
-
-
-
-
-
-  </main>
-
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

@@ -1,9 +1,8 @@
 <?php
 
-
-use Illuminate\Database\Seeder;
 use App\Employee;
 use App\Task;
+use Illuminate\Database\Seeder;
 
 class TasksSeeder extends Seeder
 {
@@ -14,14 +13,12 @@ class TasksSeeder extends Seeder
      */
     public function run()
     {
-        factory(Task::class, 10)-> make()
-                            -> each(function ($task){
+        factory(Task::class, 12) -> make() -> each(function($task) {
 
-          $employee = Employee::inRandomOrder()-> first();
+            $employee = Employee::inRandomOrder() -> first();
+            $task -> employee() -> associate($employee);
+            $task->save();
 
-          $task -> employee() -> associate($employee);
-
-          $task -> save();
-      });
+        });
     }
 }

@@ -1,3 +1,3 @@
 <header>
-  <a href="{{route('home')}}">Employees&Tasks</a>
+  <a href="{{route('new_home')}}">EMPLOYEES</a>
 </header>

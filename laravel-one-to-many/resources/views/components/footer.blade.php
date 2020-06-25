@@ -1,5 +1,5 @@
 <footer>
 
-  SHARED FOOTER
+  I'm a footer
 
 </footer>

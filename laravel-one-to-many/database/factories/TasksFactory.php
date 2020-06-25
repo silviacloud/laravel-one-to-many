@@ -8,8 +8,8 @@ use Faker\Generator as Faker;
 $factory->define(Task::class, function (Faker $faker) {
     return [
 
-      'name'=>$faker->word(),
-      'description'=>$faker->sentence(),
-      'deadline'=>$faker->date($format = 'Y-m-d', $min = 'now')
+    'name' => $faker -> word(),
+    'description' => $faker -> sentence(),
+    'deadline' => $faker -> date()
     ];
 });

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignKeys extends Migration
+class CreatePasswordResetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class AddForeignKeys extends Migration
      */
     public function up()
     {
-        Schema::table('tasks', function (Blueprint $table){
-          $table->foreign('employee_id', 'employee')
-                  ->references('id')
-                  ->on('employees');
+        Schema::create('password_resets', function (Blueprint $table) {
+            $table->string('email')->index();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -27,8 +27,6 @@ class AddForeignKeys extends Migration
      */
     public function down()
     {
-        Schema::table('tasks', function (Blueprint $table){
-          $table->dropForeigns('employee');
-        });
+        Schema::dropIfExists('password_resets');
     }
 }
