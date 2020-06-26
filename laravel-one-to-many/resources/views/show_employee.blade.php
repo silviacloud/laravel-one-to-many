@@ -34,9 +34,12 @@
       <p>LOCATIONS: none</p>
     @endif
 
-    <a href="{{route ('edit_employee', $employee['id'])}}">EDIT</a>
-    <span><a >DELETE</a></span>
-
+    @auth
+      <a href="{{route ('edit_employee', $employee['id'])}}">EDIT</a>
+      <span><a >DELETE</a></span>
+    @else
+      <a href="{{route ('login')}}">LOGIN</a>
+    @endauth
   </main>
 
 @endsection
